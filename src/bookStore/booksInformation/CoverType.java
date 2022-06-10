@@ -1,3 +1,5 @@
+package bookStore.booksInformation;
+
 public enum CoverType {
-    PAPERBACK, HARCOVER;
+    PAPERBACK, HARDCOVER;
 }
