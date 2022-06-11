@@ -27,6 +27,13 @@ public class Publisher {
     public Publisher publisherName(){
         return this.publisherName;
     }
+
+    @Override
+
+    public String toString(){
+        return "[Id: " + id + "\nPublisher Name: " + publisherName + "]";
+    }
+    
     
     
 }
