@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Author{
 
-    private int   identifier;
-    private String firstName;
+    private int     identifier;
+    private String  firstName;
     private String  lastName;
     
     public Author(){};

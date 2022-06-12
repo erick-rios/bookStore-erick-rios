@@ -30,8 +30,23 @@ public class BookService {
         Book[] filterBooks = new Book[matchBooks];
         int index = 0;
         for(Book book : books){
-            if(book.hasPublishingYear()) filterBooks[index++] = book; 
+            if(book.getPublishingYear()) filterBooks[index++] = book; 
         }
         return filterBooks;
+    }
+    public Book[] filterBooksByPublisher(Publisher publisher, Book[] books){
+        if(publisher == null || books == null) return new filterBooks[0];
+        int matchBooks = 0;
+        for(Book book : books){
+            if(book.getPublisher().equals(publisher)) matchBooks++;
+        }
+        Book[] filterBooks = new Book[matchBooks];
+        int index = 0;
+        for(Book book : books){
+            if(book.getPublisher().equals(publisher)){
+                filterBooks[index++] = book;
+            }
+        }
+        return filterBooks; 
     }
 }

@@ -82,9 +82,13 @@ public class Book {
     public boolean equals(Object object){
         if(this == object) return true;
         if(object == null) return false;
-        if(this.getClass()!= object.getClass())return false;
-        
-
+        if(this.getClass() != object.getClass()) return false;
+        Book anotherBook = (Book) object;
+        return id == anotherBook.id && Object.equals(name, anotherBook.name) 
+               && Array.equals(authors, anotherBook.authors) && Object.equals(publisher, another.publisher) 
+               && amountOfPages == anotherBook.amountOfPages && Object.equals(price, anotherBook.price) 
+               && CoverType == another.CoverType;
+    
     }
 
     public boolean hasAuthor(Author authorToSearch){

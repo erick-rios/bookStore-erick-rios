@@ -8,7 +8,7 @@ public class Publisher {
     public Publisher(){};
 
     public Publisher(int id, String publisherName){
-        this.id = id;
+        this.id            = id;
         this.publisherName = publisherName;
     }
 
@@ -27,9 +27,16 @@ public class Publisher {
     public Publisher publisherName(){
         return this.publisherName;
     }
-
+|   
     @Override
-
+    public boolen equals(Object object){
+        if(object == null) return false;
+        if(this == object) return true;
+        if(getClass() != object.getClass())return false;
+        Publisher anotherPublisher = (Publisher) object;
+        return id == anotherPublisher.id && Object.equals(publisherName, anotherPublisher.publisherName);
+    }
+    @Override
     public String toString(){
         return "[Id: " + id + "\nPublisher Name: " + publisherName + "]";
     }
