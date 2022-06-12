@@ -51,7 +51,51 @@ public class Book {
     public void setPrice(BigDecimal price){
         this.price = price;
     }
-    
+    public void setCoverType(CoverType CoverType){
+        this.CoverType = CoverType;
+    }
+    public int getId(){
+        return this.id;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public Author[] getAuthors(){
+        return this.authors;
+    }
+    public Publisher getPublisher(){
+        return this.publisher;
+    }
+    public int getPublishingYear(){
+        return this.publishingYear;
+    }
+    public int getAmountOfPages(){
+        return this.amountOfPages;
+    }
+    public BigDecimal getPrice(){
+        return this.price;
+    }
+    public CoverType getCoverType(){
+        return this.CoverType;
+    }
+    @Override
+    public boolean equals(Object object){
+        if(this == object) return true;
+        if(object == null) return false;
+        if(this.getClass()!= object.getClass())return false;
+        
+
+    }
+
+    public boolean hasAuthor(Author authorToSearch){
+        for(Author author : authors){
+            if(author.equals(authorToSearch)){
+                return true;
+            }
+        }
+        return false;
+
+    }
 
     @Override
     public String toString(){

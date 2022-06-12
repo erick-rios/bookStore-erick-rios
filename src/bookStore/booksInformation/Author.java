@@ -1,10 +1,12 @@
 package bookStore.booksInformation;
 
+import java.util.Objects;
+
 public class Author{
 
-    int   identifier;
-    String firstName;
-    String  lastName;
+    private int   identifier;
+    private String firstName;
+    private String  lastName;
     
     public Author(){};
     
@@ -32,6 +34,13 @@ public class Author{
         return this.lastName;
     }
     
+    @Override
+    public boolean equals(Object object){
+        if(this == object) return true;
+        if(this.getClass() != object.getClass()) return false;
+        Author otherAuthor = (Author) object;
+        return Object.equals(identifier, otherAuthor.identifier) && Object.equals(firstName,otherAuthor.firstName) && Object.equals(lastName, otherAuthor.lastName);
+    }
 
 
     @Override
