@@ -30,6 +30,29 @@ public class Book {
 
     }
 
+    public void setId(int id){
+        this.id = id;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAuthors(Author[] authors){
+        this.authors = authors;
+    }
+    public void setPublisher(Publisher publisher){
+        this.publisher = publisher;
+    }
+    public void setPublishingYear(int publishingYear){
+        this.publishingYear = publishingYear;
+    }
+    public void setAmountOfPages(int amountOfPages){
+        this.amountOfPages = amountOfPages;
+    }
+    public void setPrice(BigDecimal price){
+        this.price = price;
+    }
+    
+
     @Override
     public String toString(){
         return "[Id: "+ id+ "\nName: "+ name +"\nAuthor " + Arrays.toString(authors)+ "\nPublishing Year: " + publishingYear + "\nAmount of Pages: " + amountOfPages + "\nPrice " + price + "\nCover Type: " + CoverType + "]";
