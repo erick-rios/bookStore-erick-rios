@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Book {
     private int              id;
     private String         name;
-    private Autor[]     authors;
+    private Author[]     authors;
     private Publisher publisher;
     private int  publishingYear;
     private int   amountOfPages;
@@ -84,10 +84,10 @@ public class Book {
         if(object == null) return false;
         if(this.getClass() != object.getClass()) return false;
         Book anotherBook = (Book) object;
-        return id == anotherBook.id && Object.equals(name, anotherBook.name) 
-               && Array.equals(authors, anotherBook.authors) && Object.equals(publisher, another.publisher) 
-               && amountOfPages == anotherBook.amountOfPages && Object.equals(price, anotherBook.price) 
-               && CoverType == another.CoverType;
+        return id == anotherBook.id && Objects.equals(name, anotherBook.name) 
+               && Arrays.equals(authors, anotherBook.authors) && Objects.equals(publisher, anotherBook.publisher) 
+               && amountOfPages == anotherBook.amountOfPages && Objects.equals(price, anotherBook.price) 
+               && CoverType == anotherBook.CoverType;
     
     }
 

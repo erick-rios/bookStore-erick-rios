@@ -1,8 +1,8 @@
-package bookStore.booksInformation;
+package bookStore.store;
 
 import bookStore.booksInformation.*;
-import bookStore.store.*;
 import java.util.Arrays;
+import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {

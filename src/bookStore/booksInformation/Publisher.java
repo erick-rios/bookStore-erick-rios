@@ -1,5 +1,7 @@
 package bookStore.booksInformation;
 
+import java.util.Objects;
+
 public class Publisher {
 
     private int               id;
@@ -24,17 +26,17 @@ public class Publisher {
         return this.id;
     }
 
-    public Publisher publisherName(){
+    public String publisherName(){
         return this.publisherName;
     }
-|   
+  
     @Override
-    public boolen equals(Object object){
+    public boolean equals(Object object){
         if(object == null) return false;
         if(this == object) return true;
         if(getClass() != object.getClass())return false;
         Publisher anotherPublisher = (Publisher) object;
-        return id == anotherPublisher.id && Object.equals(publisherName, anotherPublisher.publisherName);
+        return id == anotherPublisher.id && Objects.equals(publisherName, anotherPublisher.publisherName);
     }
     @Override
     public String toString(){

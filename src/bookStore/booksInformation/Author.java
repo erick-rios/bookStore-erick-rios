@@ -24,8 +24,8 @@ public class Author{
     public void setLastName(String lastName){
         this.lastName = lastName;
     }
-    public int getId(){
-        return this.id;
+    public int getIdentifier(){
+        return this.identifier;
     }
     public String getFirstName(){
         return  this.firstName;
@@ -39,12 +39,12 @@ public class Author{
         if(this == object) return true;
         if(this.getClass() != object.getClass()) return false;
         Author otherAuthor = (Author) object;
-        return Object.equals(identifier, otherAuthor.identifier) && Object.equals(firstName,otherAuthor.firstName) && Object.equals(lastName, otherAuthor.lastName);
+        return identifier == otherAuthor.identifier && Objects.equals(firstName,otherAuthor.firstName) && Objects.equals(lastName, otherAuthor.lastName);
     }
 
 
     @Override
-    public String toStString(){
-        return "[Identifier: " + identifier + "\nFirstName: " + firstName + "\nLastName: "+ lastName"]";
+    public String toString(){
+        return "[Identifier: " + identifier + "\nFirstName: " + firstName + "\nLastName: "+ lastName+"]";
     }
 }
